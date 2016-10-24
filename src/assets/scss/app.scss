@@ -1,0 +1,109 @@
+@import 'settings';
+@import 'foundation-emails';
+
+$matin-blue: #335170;
+$matin-yellow: #ebb211;
+html, body, .body{
+	background-color: #fff;
+}
+.header {
+	background-color: $matin-blue;
+
+	.columns {
+		padding-bottom: 0;
+	}
+
+	p {
+		color: #fff;
+		margin-bottom: 0;
+	}
+
+	.wrapper-inner {
+	  padding: 20px; /*controls the height of the header*/
+	}
+
+	.container {
+	  background: $matin-blue;
+	}
+
+	.logo {
+		width: 240px;
+	}
+}
+
+.subheader{
+	background-color: $matin-yellow;
+
+	.wrapper-inner {
+		padding: 8px;
+	}
+
+	.container {
+		background-color: $matin-yellow;
+	}
+
+	p {
+		margin-bottom: 0
+	}
+}
+
+.main {
+	padding: $global-padding;
+	.columns {
+		padding-bottom: 0;
+	}
+	.item {
+		.title {
+			color: $matin-blue;
+			font-weight: 500;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+	}
+}
+.padding-right {
+	th {padding-right: 8px;}
+}
+
+.sidebar {
+	padding: $global-padding;
+	.columns {
+		padding-bottom: 0;
+	}
+	.subheader {
+		background-color: transparent;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: darken($matin-yellow, 20%);
+		border-bottom: 2px solid darken($matin-yellow, 20%);
+
+	}
+
+	.item {
+		border-bottom: 1px solid $medium-gray;
+		margin-top: $global-margin;
+		.title {
+			font-size: $global-font-size;
+			font-weight: 500;
+			color: $matin-blue;
+		}
+		.meta {
+			font-size: $small-font-size;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+.button.matin table td{
+	background-color: $matin-blue;
+}
+
+.button.matin:hover table td{
+	background-color: darken($matin-blue, 20%);
+}
