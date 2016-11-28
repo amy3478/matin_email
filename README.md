@@ -57,11 +57,6 @@ Command format
 cs src/etc
 python3 scraper.py [RSS_URL] [num] ../pages/[template_file_name] [keyword]
 ```
-Command example (Create a 1-column gold theme newsletter with 5 articles from New York Times Science)
-```bash
-cs src/etc
-python3 scraper.py http://rss.nytimes.com/services/xml/rss/nyt/Science.xml 5 ../pages/tmp_1_col_gold.html master
-```
 
 #### [RSS_URL]: 
 the URL got from Step 1
@@ -82,3 +77,10 @@ Website | Keyword
 --- | --- 
 New York Times | master
 Science News | main
+
+Command example 
+**Create a 1-column gold theme newsletter with 5 articles from New York Times Science**
+```bash
+cs src/etc
+python3 scraper.py http://rss.nytimes.com/services/xml/rss/nyt/Science.xml 5 ../pages/tmp_1_col_gold.html master
+```
