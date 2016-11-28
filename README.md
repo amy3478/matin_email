@@ -6,34 +6,14 @@ This project is for auto-generating MATIN's newsletters. It is built on [Foundat
 
 To use this project, your computer needs [Node.js](https://nodejs.org/en/) 0.12 or greater.
 
-### Using the CLI
+### Clone this project
 
-Install the Foundation CLI with this command:
+### Setup
 
-```bash
-npm install foundation-cli --global
-```
-
-Use this command to set up a blank Foundation for Emails project:
+To set up the project, navigate to the project folder in your command line, and install the needed dependencies:
 
 ```bash
-foundation new --framework emails
-```
-
-The CLI will prompt you to give your project a name. The template will be downloaded into a folder with this name.
-
-### Manual Setup
-
-To manually set up the template, first download it with Git:
-
-```bash
-git clone https://github.com/zurb/foundation-emails-template projectname
-```
-
-Then open the folder in your command line, and install the needed dependencies:
-
-```bash
-cd projectname
+cd matin_email
 npm install
 ```
 
