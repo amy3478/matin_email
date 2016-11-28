@@ -26,6 +26,7 @@ npm install
 ## 4 Templates included4
 
 - 1-column layout, blue-yellow theme
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_1_col.png "1 column layout")
 - 1-column layout, black-gold theme
 - 2-column layout, blue-yellow theme
 - 2-column layout, black-gold theme
