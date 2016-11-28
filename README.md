@@ -34,6 +34,12 @@ npm install
 - __2-column layout, black-gold theme__
 ![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_2_col_gold.png "2 column layout gold")
 
+### 2 item layouts
+- with the cover image
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/with.png)
+- without the cover image
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/without.png)
+
 ## How to create a newsletter
 
 ### Step 1: __Prepare a RSS URL__
