@@ -82,6 +82,31 @@ Science News | main
 Use the command below to
 **create a 1-column gold theme newsletter with 5 articles from New York Times Science**
 ```bash
-cs src/etc
 python3 scraper.py http://rss.nytimes.com/services/xml/rss/nyt/Science.xml 5 ../pages/tmp_1_col_gold.html master
 ```
+
+### Step 3: __Build the newsletter__
+Because MATIN newsletter project uses Foundation Email framework, we need to build the final version that has inline CSS code. Run the command below.
+```bash
+npm run build
+```
+This will create/update the final html file in **dist** directory. For instance, if you run the code below
+```bash
+python3 scraper.py http://rss.nytimes.com/services/xml/rss/nyt/Science.xml 5 ../pages/tmp_1_col_gold.html master
+npm run build
+```
+The file **dist/tmp_1_col_gold.html** should be updated. 
+
+### Step 4: __Create a newsletter on MATIN__
+- Login to the Admin panel
+- Choose **Newsletter** from **Components** dropdown
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/newsletter1.png)
+- On Newsletter tab, choose **New** to create a newsletter
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/newsletter2.png)
+- Choose **No Template** and save
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/newsletter3.png)
+- The created newsletter will be shown on the list. Click it to edit
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/newsletter4.png)
+- Copy the HTML code from the file generated in the previous step to **HTML Content** textarea
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/newsletter5.png)
+
