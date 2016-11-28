@@ -23,7 +23,7 @@ cd matin_email
 npm install
 ```
 
-## 4 Templates included4
+## 4 Templates included
 
 - __1-column layout, blue-yellow theme__
 ![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_1_col.png "1 column layout")
@@ -36,7 +36,7 @@ npm install
 
 ## How to create a newsletter
 
-- 
+### Step 1: __Prepare a RSS url link__
 
 Run `npm start` to kick off the build process. A new browser tab will open with a server pointing to your project files.
 
