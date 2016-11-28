@@ -36,7 +36,7 @@ npm install
 
 ## How to create a newsletter
 
-### Step 1: __Prepare a RSS url link__
+### Step 1: __Prepare a RSS URL__
 
 Get the RSS feed link from MATIN 
 ```
@@ -50,3 +50,22 @@ https://www.sciencenews.org/feeds/headlines.rss
 http://rss.nytimes.com/services/xml/rss/nyt/Science.xml
 ```
 
+### Step 2: __Run the script to fetch the feed__
+
+Run the command below
+```bash
+cs src/etc
+python3 scraper.py [RSS URL] [#] ../pages/[template file name] [keyword - optional]
+```
+- [RSS URL] the URL got from Step 1
+- [#] the number of articles to fetch
+- [template file name] one of 4 templates below
+..* tmp_1_col.html
+..* tmp_1_col_gold.html
+..* tmp_2_col.html
+..* tmp_2_col_gold.html
+- [keyword - __optional__] a keyword used to filter the image grabbed from the article. It has been set to **master** by default. **master** is the keyword to get the main image from New York Times RSS. 
+| Website       | Keyword       |
+| ------------- |:-------------:|
+| New York Times| master        |
+| Science News  | main          |
