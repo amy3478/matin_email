@@ -100,7 +100,7 @@ Because MATIN newsletter project uses Foundation Email framework, we need to bui
 ```bash
 npm run build
 ```
-By running the code above, a new tab will be open in your default browser. It always opens index.html by default. In order to see the newsletter you created in Step2, just simply append the name of the template file to the url address. It should look like http://localhost:3xxx/tmp_1_col.html if your newsletter uses tmp_1_col.html as the template.
+**By running the code above, a new tab will be open in your default browser. It always opens index.html by default. In order to see the newsletter you created in Step2, just simply append the name of the template file to the url address. It should look like http://localhost:3xxx/tmp_1_col.html if your newsletter uses tmp_1_col.html as the template.**
 
 This will create/update the final html file in **dist** directory. For instance, if you run the code below
 ```bash
