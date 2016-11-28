@@ -27,7 +27,7 @@ npm install
 
 - __1-column layout, blue-yellow theme__
 ![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_1_col.png "1 column layout")
-- __1-column layout, black-gold theme__
+- __1-column layout, black-gold theme **(Recommended)**__  
 ![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_1_col_gold.png "1 column layout gold")
 - __2-column layout, blue-yellow theme__
 ![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_2_col.png "2 column layout")
