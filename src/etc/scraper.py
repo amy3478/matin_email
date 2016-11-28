@@ -22,11 +22,11 @@ keyword = ''
 try:
 	opts, args = getopt.getopt(sys.argv[1:], "hu:n:t:k:", ["url=","num=","tmp=","keyword="])
 except getopt.GetoptError:
-	print('scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>')
+	print('python3 scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>')
 	sys.exit(2)
 for opt, arg in opts:
 	if opt == '-h':
-		print('scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>')
+		print('python3 scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>')
 		sys.exit()
 	elif opt in ("-u", "--url"):
 		rss = requests.get(arg)
@@ -38,13 +38,13 @@ for opt, arg in opts:
 		keyword = arg
 
 if (rss == ''):
-	print (bcolors.FAIL + '\nPlease specify a correct URL' + bcolors.ENDC + bcolors.OKGREEN + '\n\nscraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>' + bcolors.ENDC)
+	print (bcolors.FAIL + '\nPlease specify a correct URL' + bcolors.ENDC + bcolors.OKGREEN + '\n\npython3 scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>' + bcolors.ENDC)
 	sys.exit()
 elif (num == ''):
-	print (bcolors.FAIL + '\nPlease specify the number of articles to fetch' + bcolors.ENDC + bcolors.OKGREEN + ' \n\nscraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>' + bcolors.ENDC)
+	print (bcolors.FAIL + '\nPlease specify the number of articles to fetch' + bcolors.ENDC + bcolors.OKGREEN + ' \n\npython3 scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>' + bcolors.ENDC)
 	sys.exit()
 elif (tmp == ''):
-	print (bcolors.FAIL + '\nPlease specify a correct path to a template. It should look like "../pages/<filename>" ' + bcolors.ENDC + bcolors.OKGREEN + ' \n\nscraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>' + bcolors.ENDC)
+	print (bcolors.FAIL + '\nPlease specify a correct path to a template. It should look like "../pages/<filename>" ' + bcolors.ENDC + bcolors.OKGREEN + ' \n\npython3 scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>' + bcolors.ENDC)
 	sys.exit()
 elif (keyword == ''):
 	keyword = 'master'

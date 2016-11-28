@@ -61,14 +61,18 @@ pip3 install beautifulsoup4
 Run the script
 ```bash
 cd src/etc
-python3 scraper.py [RSS_URL] [num] ../pages/[template_file_name] [keyword]
+python3 scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>
+```
+or 
+```bash
+python3 scraper.py --url <rss-url> --num <num-of-article-to-fetch> --tmp <path-to-the-template> --keyword <keyword-to-filter-image>
 ```
 
-#### [RSS_URL]: 
+#### <rss-url>: 
 the URL got from Step 1
-#### [num]: 
+#### <num-of-article-to-fetch>: 
 the number of articles to fetch
-#### [template_file_name]: 
+#### <path-to-the-template>: 
 one of 4 templates below
 
 * tmp_1_col.html
@@ -76,7 +80,7 @@ one of 4 templates below
 * tmp_2_col.html
 * tmp_2_col_gold.html
 
-#### [keyword]:
+#### <keyword-to-filter-image>:
 (__OPTIONAL__) a keyword used to filter the image grabbed from the article. It has been set to **master** by default. **master** is the keyword to get the main image from New York Times RSS. 
 
 Website | Keyword
@@ -88,7 +92,7 @@ Science News | main
 Use the command below to
 **create a 1-column gold theme newsletter with 5 articles from New York Times Science**
 ```bash
-python3 scraper.py http://rss.nytimes.com/services/xml/rss/nyt/Science.xml 5 ../pages/tmp_1_col_gold.html master
+python3 scraper.py -u http://rss.nytimes.com/services/xml/rss/nyt/Science.xml -n 5 -t ../pages/tmp_1_col_gold.html -k master
 ```
 
 ### Step 3: __Build the newsletter__
@@ -96,9 +100,11 @@ Because MATIN newsletter project uses Foundation Email framework, we need to bui
 ```bash
 npm run build
 ```
+By running the code above, a new tab will be open in your default browser. It always opens index.html by default. In order to see the newsletter you created in Step2, just simply append the name of the template file to the url address. It should look like http://localhost:3xxx/tmp_1_col.html if your newsletter uses tmp_1_col.html as the template.
+
 This will create/update the final html file in **dist** directory. For instance, if you run the code below
 ```bash
-python3 scraper.py http://rss.nytimes.com/services/xml/rss/nyt/Science.xml 5 ../pages/tmp_1_col_gold.html master
+python3 scraper.py -u http://rss.nytimes.com/services/xml/rss/nyt/Science.xml -n 5 -t ../pages/tmp_1_col_gold.html -k master
 npm run build
 ```
 The file **dist/tmp_1_col_gold.html** should be updated. 
