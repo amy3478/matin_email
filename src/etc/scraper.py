@@ -1,18 +1,58 @@
-import os, sys, subprocess
+import os, sys, subprocess, getopt
 from bs4 import BeautifulSoup as BS
 import image_scraper as IS
 import requests
 
-# feed = ET.parse('xml/feed.xml')
-rss = requests.get(sys.argv[1])
-num = sys.argv[2]
-tmp = sys.argv[3]
-keyword = sys.argv[4]
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+# Process Args
+rss = ''
+num = ''
+tmp = ''
+keyword = ''
+
+try:
+	opts, args = getopt.getopt(sys.argv[1:], "hu:n:t:k:", ["url=","num=","tmp=","keyword="])
+except getopt.GetoptError:
+	print('scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>')
+	sys.exit(2)
+for opt, arg in opts:
+	if opt == '-h':
+		print('scraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>')
+		sys.exit()
+	elif opt in ("-u", "--url"):
+		rss = requests.get(arg)
+	elif opt in ("-n", "--num"):
+		num = arg
+	elif opt in ("-t", "--tmp"):
+		tmp = arg
+	elif opt in ("-k", "--keyword"):
+		keyword = arg
+
+if (rss == ''):
+	print (bcolors.FAIL + '\nPlease specify a correct URL' + bcolors.ENDC + bcolors.OKGREEN + '\n\nscraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>' + bcolors.ENDC)
+	sys.exit()
+elif (num == ''):
+	print (bcolors.FAIL + '\nPlease specify the number of articles to fetch' + bcolors.ENDC + bcolors.OKGREEN + ' \n\nscraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>' + bcolors.ENDC)
+	sys.exit()
+elif (tmp == ''):
+	print (bcolors.FAIL + '\nPlease specify a correct path to a template. It should look like "../pages/<filename>" ' + bcolors.ENDC + bcolors.OKGREEN + ' \n\nscraper.py -u <rss-url> -n <num-of-article-to-fetch> -t <path-to-the-template> -k <keyword-to-filter-image>' + bcolors.ENDC)
+	sys.exit()
+elif (keyword == ''):
+	keyword = 'master'
+
 feed = BS(rss.content,'xml')
 
 # print(root.attrib)
-
-new_item = 1
+new_item = ''
 
 with open(tmp,'r') as file:
 	content = file.read()
@@ -26,8 +66,6 @@ for item in feed.findAll('item', limit=int(num)):
 	image_urls_str = subprocess.check_output("./imagescraper.sh "+url, shell=True)[:-1].decode("utf-8")
 	image_urls = image_urls_str.split()
 	image_url = ""
-	if keyword == "":
-		keyword = "master"
 	for this_image_url in image_urls:
 		if keyword in this_image_url:
 			image_url = this_image_url
