@@ -115,5 +115,5 @@ Now you can select the newsletter to preview or send a testing copy to yourself.
 
 
 ## Todo
-- Upload the logo to a 
+- Complete the pipeline of fetching secondary content once the content is confirmed
 
