@@ -78,8 +78,9 @@ Website | Keyword
 New York Times | master
 Science News | main
 
-Command example 
-**Create a 1-column gold theme newsletter with 5 articles from New York Times Science**
+#### Example 
+Use the command below to
+**create a 1-column gold theme newsletter with 5 articles from New York Times Science**
 ```bash
 cs src/etc
 python3 scraper.py http://rss.nytimes.com/services/xml/rss/nyt/Science.xml 5 ../pages/tmp_1_col_gold.html master
