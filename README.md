@@ -23,9 +23,12 @@ cd matin_email
 npm install
 ```
 
-## what's included
+## Templates included4
 
-- 4 templates
+- 1-column layout, blue-yellow theme
+- 1-column layout, black-gold theme
+- 2-column layout, blue-yellow theme
+- 2-column layout, black-gold theme
 
 ## How to create a newsletter
 
