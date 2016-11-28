@@ -23,7 +23,7 @@ cd matin_email
 npm install
 ```
 
-## Templates included4
+## 4 Templates included4
 
 - 1-column layout, blue-yellow theme
 - 1-column layout, black-gold theme
