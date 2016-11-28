@@ -25,11 +25,14 @@ npm install
 
 ## 4 Templates included4
 
-- 1-column layout, blue-yellow theme
+- __1-column layout, blue-yellow theme__
 ![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_1_col.png "1 column layout")
-- 1-column layout, black-gold theme
-- 2-column layout, blue-yellow theme
-- 2-column layout, black-gold theme
+- __1-column layout, black-gold theme__
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_1_col_gold.png "1 column layout gold")
+- __2-column layout, blue-yellow theme__
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_2_col.png "2 column layout")
+- __2-column layout, black-gold theme__
+![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/tmp_2_col_gold.png "2 column layout gold")
 
 ## How to create a newsletter
 
