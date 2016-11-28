@@ -110,3 +110,10 @@ The file **dist/tmp_1_col_gold.html** should be updated.
 - Copy the HTML code from the file generated in the previous step to **HTML Content** textarea
 ![alt text](https://github.com/amy3478/matin_email/blob/master/src/etc/screenshoots/newsletter5.png)
 
+### Step 5: __Test__
+Now you can select the newsletter to preview or send a testing copy to yourself.
+
+
+## Todo
+- Upload the logo to a 
+
