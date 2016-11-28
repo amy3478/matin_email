@@ -66,7 +66,7 @@ python3 scraper.py [RSS_URL] [num] ../pages/[template_file_name] [keyword]
 * tmp_2_col.html
 * tmp_2_col_gold.html
 
-#### [keyword] (__optional__): a keyword used to filter the image grabbed from the article. It has been set to **master** by default. **master** is the keyword to get the main image from New York Times RSS. 
+#### [keyword]: __OPTIONAL__ a keyword used to filter the image grabbed from the article. It has been set to **master** by default. **master** is the keyword to get the main image from New York Times RSS. 
 
 Website | Keyword
 --- | --- 
