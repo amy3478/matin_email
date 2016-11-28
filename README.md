@@ -23,7 +23,13 @@ cd matin_email
 npm install
 ```
 
-## Build Commands
+## what's included
+
+- 4 templates
+
+## How to create a newsletter
+
+- 
 
 Run `npm start` to kick off the build process. A new browser tab will open with a server pointing to your project files.
 
