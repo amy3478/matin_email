@@ -8,6 +8,12 @@ To use this project, your computer needs [Node.js](https://nodejs.org/en/) 0.12 
 
 ### Clone this project
 
+To get started, run the following command to clone the project:
+
+```bash
+git clone https://github.com/amy3478/matin_email.git
+```
+
 ### Setup
 
 To set up the project, navigate to the project folder in your command line, and install the needed dependencies:
