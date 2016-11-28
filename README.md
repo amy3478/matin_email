@@ -69,3 +69,9 @@ python3 scraper.py [RSS URL] [#] ../pages/[template file name] [keyword - option
 | ------------- | -------------:|
 | New York Times| master        |
 | Science News  | main          |
+
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
