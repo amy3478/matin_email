@@ -68,11 +68,11 @@ or
 python3 scraper.py --url <rss-url> --num <num-of-article-to-fetch> --tmp <path-to-the-template> --keyword <keyword-to-filter-image>
 ```
 
-#### <rss-url>: 
+#### rss-url: 
 the URL got from Step 1
-#### <num-of-article-to-fetch>: 
+#### num-of-article-to-fetch: 
 the number of articles to fetch
-#### <path-to-the-template>: 
+#### path-to-the-template: 
 one of 4 templates below
 
 * tmp_1_col.html
@@ -80,7 +80,7 @@ one of 4 templates below
 * tmp_2_col.html
 * tmp_2_col_gold.html
 
-#### <keyword-to-filter-image>:
+#### keyword-to-filter-image:
 (__OPTIONAL__) a keyword used to filter the image grabbed from the article. It has been set to **master** by default. **master** is the keyword to get the main image from New York Times RSS. 
 
 Website | Keyword
