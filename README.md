@@ -60,7 +60,7 @@ pip3 install beautifulsoup4
 
 Run the script
 ```bash
-cs src/etc
+cd src/etc
 python3 scraper.py [RSS_URL] [num] ../pages/[template_file_name] [keyword]
 ```
 
