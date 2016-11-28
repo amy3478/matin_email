@@ -38,36 +38,15 @@ npm install
 
 ### Step 1: __Prepare a RSS url link__
 
-Run `npm start` to kick off the build process. A new browser tab will open with a server pointing to your project files.
-
-Run `npm run build` to inline your CSS into your HTML along with the rest of the build process.
-
-## Litmus Tests (config.json)
-
-Testing in Litmus requires the images to be hosted publicly. The provided gulp task handles this by automating hosting to an AWS S3 account. Provide your Litmus and AWS S3 account details in the `example.config.json` and then rename to `config.json`. Litmus config, and `aws.url` are required, however if you follow the [aws-sdk suggestions](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html) you don't need to supply the AWS credentials into this JSON.
-
-```json
-{
-  "aws": {
-    "region": "us-east-1",
-    "accessKeyId": "YOUR_ACCOUNT_KEY",
-    "secretAccessKey": "YOUR_ACCOUNT_SECRET",
-    "params": {
-        "Bucket": "elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE"
-    },
-    "url": "https://s3.amazonaws.com/elasticbeanstalk-us-east-1-THIS_IS_JUST_AN_EXAMPLE"
-  },
-  "litmus": {
-    "username": "YOUR_LITMUS@EMAIL.com",
-    "password": "YOUR_ACCOUNT_PASSWORD",
-    "url": "https://YOUR_ACCOUNT.litmus.com",
-    "applications": ["ol2003","ol2007","ol2010","ol2011","ol2013","chromegmailnew","chromeyahoo","appmail9","iphone5s","ipad","android4","androidgmailapp"]
-  }
-}
+Get the RSS feed link from MATIN 
 ```
+https://matin.gatech.edu/feedaggregator/feed.rss
+```
+For how to prepare the RSS feed on MATIN, please refer to [the document](https://docs.google.com/document/d/15XePN1W5p0ezKn5U-3q2sTGUM7fyOPp822i_80fsHds/edit?usp=sharing).
 
-For a full list of Litmus' supported test clients(applications) see their [client list](https://litmus.com/emails/clients.xml).
-
-**Caution:** AWS Service Fees will result, however, are usually very low do to minimal traffic. Use at your own discretion.
-
+Or get a RSS feed url from other sites. Below are two examples used for testing the project
+```
+https://www.sciencenews.org/feeds/headlines.rss
+http://rss.nytimes.com/services/xml/rss/nyt/Science.xml
+```
 
