@@ -52,7 +52,13 @@ http://rss.nytimes.com/services/xml/rss/nyt/Science.xml
 
 ### Step 2: __Run the script to fetch the feed__
 
-Command format
+Before run the script, you need to install some Python packages.
+```bash
+pip3 install ImageScraper
+pip3 install beautifulsoup4
+```
+
+Run the script
 ```bash
 cs src/etc
 python3 scraper.py [RSS_URL] [num] ../pages/[template_file_name] [keyword]
